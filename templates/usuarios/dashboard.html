@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        {% include 'partials/header.html' %}
+<body>
+    <div class="contact-area section-padding-0-80">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-heading">
+                        {% csrf_token %}
+                        <h3>Olá {{ user.username }}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+</body>
+{% endblock %}
